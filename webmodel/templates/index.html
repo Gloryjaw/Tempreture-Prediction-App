@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to Tempreture Predictor</h1>
+    <p>
+        This model predicts the value of maximum tepreture of the World War 2 times given input of minimum tempreture of
+        that time. This Model is trained on 80,000 Examples of traning set, with 100,000 iterations of Gradient Descent. It 
+        has accuracy of 85%.
+    </p>
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="x_train">
+        <button type="submit">Predict</button>
+    </form>
+    <div>
+        {{prediction_text}}
+    </div>
+</body>
+
+</html>
